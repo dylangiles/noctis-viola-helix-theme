@@ -1,0 +1,123 @@
+# Port of Noctis Viola from VSCode
+
+'ui.selection' = { bg = "jagger" }
+
+'ui.background' = { fg = "foreground", bg = "background" } # Default background color.
+'ui.background.separator' = { fg = "red", bg = "red" }
+# Window border between splits.
+
+
+'ui.cursor' = { bg = "jagger" } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
+# 'ui.cursor.primary' = { bg = "selection-background" }      # The primary cursor when there are multiple (shift-c).
+'ui.cursor.insert' = { bg = "jagger" } # The cursor in insert mode (i).
+'ui.cursor.select' = { bg = "jagger" } # The cursor in select mode (v).
+'ui.cursor.match' = { bg = "ce-soir", modifiers = [
+    "bold",
+] } # The matching parentheses of that under the cursor.
+
+
+'ui.linenr' = { fg = "line-number-fg" }
+'ui.linenr.selected' = { fg = "lilac-bush" }
+
+'ui.virtual.inlay-hint' = { fg = "east-side", modifiers = ["dim"] }
+
+########## Syntax highlighting ##########
+'type' = { fg = "copper" }
+'type.enum.variant' = { fg = 'copper' }
+
+'constructor' = { fg = "copper" }
+
+'constant' = { fg = 'galliano' }
+'constant.builtin.boolean' = { fg = "medium-slate-blue" }
+
+'variable' = { fg = "maize" }
+'variable.other.member' = { fg = "text" }
+
+'comment' = { fg = "deluge", modifiers = ["italic"] } # This is a comment.
+'comment.line' = {}                                   # Line comments, like this.
+'comment.block' = {}                                  # Block comments, like /* this */ in some languages.
+'comment.block.documentation' = {}                    # Doc comments, e.g '///' in rust.
+
+
+'keyword' = { fg = "pale-violet-red" }
+'keyword.storage.type' = { fg = "pale-violet-red" }
+'keyword.storage.modifier' = { fg = "pale-violet-red" }
+'keyword.control.import' = { fg = "orange-keyword-fg" }
+'keyword.function' = { fg = 'orange-keyword-fg' }
+'keyword.operator' = { fg = "pale-violet-red" }
+'keyword.operator.borrow' = { fg = "pale-violet-red" }
+
+'function' = { fg = "function-name-fg" }
+
+'punctuation' = { fg = "gold", modifiers = ["bold"] }  # (){}[]:;,.
+'punctuation.delimiter' = { fg = "foreground" }        # Commas and colons.
+'punctuation.bracket.type_arguments' = { fg = 'text' }
+
+
+'namespace' = { fg = "namespace-fg" } # * Namespace keyword in java, C#, etc.
+
+'string' = { fg = "string-fg" }
+
+######## Diagnostics ########
+
+# Diffs
+'diff.plus' = { fg = "light-green" }
+'diff.minus' = { fg = "cinnabar" }
+'diff.delta' = { fg = "macaroni-and-cheese" }
+
+# Gutter area errors and warnings
+# 'info' = { fg = "magenta" }
+'warning' = { fg = "twine" }
+'error' = { fg = "cinnabar" }
+
+# Editing area errors and warnings
+#'diagnostic' = { fg = 'magenta'} 
+#'diagnostic.hint' = { fg = "magenta" }
+#'diagnostic.info' = { fg = "green" }
+'diagnostic.warning' = { fg = "macaroni-and-cheese", underline = { style = "curl" } }
+'diagnostic.error' = { fg = "cinnabar", underline = { style = "curl" } }
+
+####### Rulers and indent guides #######
+# 'ui.virtual.ruler' = { bg = "butterfly-bush" }
+'ui.virtual.ruler' = { bg = "background" }
+'ui.virtual.indent-guide' = { fg = "scarlet-gum" }
+
+######## Buffer lines #######
+'ui.bufferline' = { bg = 'red' }
+'ui.statusline' = { bg = 'tolopea' }
+'ui.window' = { fg = "lilac-bush" }
+
+
+[palette]
+gold = "#FFD700"
+copper = "#d67e5c"
+galliano = "#D5971A"
+maize = "#E4B781"
+pale-violet-red = "#DF769B"
+medium-slate-blue = "#7060EB"
+deluge = "#7f659a"
+east-side = "#b2a2c3"
+jagger = "#413253"
+ce-soir = "#8767a8"
+light-green = "#8ce99a"
+background = "#30243d"
+foreground = "#ccbfd9"
+text = "#ccbfd9"
+cinnabar = "#e34e1c"
+macaroni-and-cheese = "#fec080"
+twine = "#C48254"
+butterfly-bush = "#765992"
+tolopea = "#2b2136"
+scarlet-gum = "#422E56"
+# jagger = "#3e2d51"
+
+line-number-fg = "#5e5973"
+lilac-bush = "#996BC7"
+
+
+orange-keyword-fg = "#E66533"
+function-name-fg = "#16A3B6"
+brackets-fg = "#CCBFD9"
+namespace-fg = "#49d6e9"
+string-fg = "#49E9A6"
+# matchers #8767A8
