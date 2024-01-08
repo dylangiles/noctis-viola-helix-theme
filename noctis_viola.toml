@@ -86,13 +86,27 @@
 
 ######## Buffer lines #######
 'ui.bufferline' = { bg = 'background' }
-'ui.bufferline.active' = { bg = "lilac-bush" }
-'ui.statusline' = { bg = 'tolopea' }
+'ui.bufferline.active' = { bg = "#654d80" }
 'ui.window' = { fg = "lilac-bush" }
 
+########### Status line #######
+# ui.statusline
+'ui.statusline' = { bg = "#654d80" }
+'ui.statusline.inactive' = { bg = "tolopea" }
+'ui.statusline.insert' = { bg = "#49e9A6", fg = "#171d1e"}
+'ui.statusline.select' = { bg = "light-blue", fg = "#171d1e" }
 
+# ui.statusline
+# Statusline
+# uiStatusline
+# ui.statusline.inactive.statuslineStatusline (unfocused document)
+# ui.statusline.normal.inactiveStatusline mode during normal mode (only if editor.color-modes is enabled)
+# ui.statusline.insert[palette]
+# goldStatusline mode during insert mode (only if editor.color-modes is enabled)
+# ui.statusline.select = "#FFD700"Statusline mode during select mode (only if editor.color-modes is enabled)
+# ui.statusline.separator
+# Separator character in statusline
 [palette]
-gold = "#FFD700"
 copper = "#d67e5c"
 galliano = "#D5971A"
 maize = "#E4B781"
@@ -127,3 +141,4 @@ string-fg = "#49E9A6"
 # matchers #8767A8
 
 popup-background = "#462d5d"
+
