@@ -23,6 +23,7 @@
 # Popups 
 'ui.popup' = { bg = "popup-background" }
 
+
 ########## Syntax highlighting ##########
 'type' = { fg = "copper" }
 'type.enum.variant' = { fg = 'copper' }
@@ -84,7 +85,8 @@
 'ui.virtual.indent-guide' = { fg = "scarlet-gum" }
 
 ######## Buffer lines #######
-'ui.bufferline' = { bg = 'red' }
+'ui.bufferline' = { bg = 'background' }
+'ui.bufferline.active' = { bg = "lilac-bush" }
 'ui.statusline' = { bg = 'tolopea' }
 'ui.window' = { fg = "lilac-bush" }
 
