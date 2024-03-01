@@ -1,30 +1,65 @@
 # Port of Noctis Viola from VSCode
 
 ##################### UI elements ############################
-'ui.selection' = { bg = "jagger" }
-
-'ui.background' = { fg = "foreground", bg = "background" } # Default background color.
-'ui.background.separator' = { fg = "red", bg = "red" }
-
-'ui.cursor.primary' = { bg = "function-name-fg", fg = "#171d1e" }
-'ui.cursor.insert' = { bg = "text", fg = "green" } # The cursor in insert mode (i).
-'ui.cursor.select' = { bg = "jagger" } # The cursor in select mode (v).
-'ui.cursor.match' = { bg = "ce-soir", modifiers = [
-  "bold",
-] } # The matching parentheses of that under the cursor.
-
-# Line numbers
-'ui.linenr' = { fg = "line-number-fg" }
+'ui.background' = { fg = "lavender-gray", bg = "bleached-cedar" } # Default background color.
+'ui.background.separator' = { fg = "jagger" }                     # Picker separator below input line
+'ui.linenr' = { fg = "smoky" }
 'ui.linenr.selected' = { fg = "lilac-bush" }
-
-# Inlay hints
-'ui.virtual.inlay-hint' = { fg = "east-side", modifiers = ["dim"] }
-
-# Popups 
+'ui.statusline' = { bg = "#654d80" }
+'ui.statusline.inactive' = { bg = "tolopea" }
+'ui.statusline.insert' = { bg = "turquoise", fg = "#171d1e" }
+'ui.statusline.select' = { bg = "light-blue", fg = "#171d1e" }
 'ui.popup' = { bg = "popup-background" }
 'ui.popup.info' = { bg = "popup-background" }
+'ui.window' = { fg = "lilac-bush" }
+# 'ui.help' = 
+
+# 'ui.text'
+# 'ui.text.focus'
+# 'ui.text.inactive'
+'ui.virtual' = { fg = "jagger" }
+'ui.virtual.ruler' = { bg = "background" }
+'ui.virtual.indent-guide' = { fg = "scarlet-gum" }
+'ui.virtual.inlay-hint' = { fg = "east-side", modifiers = ["dim"] }
+
+'ui.selection' = { bg = "jagger" }
+# 'ui.selection.primary' 
+'ui.cursor.select' = { bg = "jagger" }                       # The cursor in select mode (v).
+'ui.cursor.insert' = { bg = "text", fg = "green" }
+'ui.cursor.match' = { bg = "ce-soir", modifiers = ["bold"] }
+# 'ui.cursor'
+# 'ui.highlight'
+# 'ui.highlight.frameline'
+# 'ui.debug'
+# 'ui.debug.breakpoint'
 'ui.menu' = { bg = "popup-background" }
 'ui.menu.selected' = { bg = "popup-selected" }
+# 'ui.menu.scroll'
+
+# 'diagnostic.hint'
+'diagnostic.info' = { fg = "green" }
+'diagnostic.warning' = { fg = "macaroni-and-cheese", underline = { style = "curl" } }
+'diagnostic.error' = { fg = "cinnabar", underline = { style = "curl" } }
+
+'diff.plus' = { fg = "light-green" }
+'diff.minus' = { fg = "cinnabar" }
+'diff.delta' = { fg = "macaroni-and-cheese" }
+# 'ui.cursor.primary' = { bg = "function-name-fg", fg = "#171d1e" }
+
+# The cursor in insert mode (i).
+
+# The matching parentheses of that under the cursor.
+
+# Line numbers
+
+
+# Inlay hints
+# 
+
+
+# Popups 
+
+
 ########## Syntax highlighting ##########
 'type' = { fg = "copper" }
 'type.enum.variant' = { fg = 'copper' }
@@ -37,12 +72,11 @@
 'variable' = { fg = "maize" }
 'variable.other.member' = { fg = "text" }
 
-# 'comment' = { fg = "deluge", modifiers = ["italic"] } # This is a comment.
 'comment' = { fg = "deluge" } # This is a comment.
 
-'comment.line' = {}                                   # Line comments, like this.
-'comment.block' = {}                                  # Block comments, like /* this */ in some languages.
-'comment.block.documentation' = {}                    # Doc comments, e.g '///' in rust.
+'comment.line' = {}                # Line comments, like this.
+'comment.block' = {}               # Block comments, like /* this */ in some languages.
+'comment.block.documentation' = {} # Doc comments, e.g '///' in rust.
 
 'keyword' = { fg = "pale-violet-red" }
 'keyword.storage.type' = { fg = "pale-violet-red" }
@@ -55,7 +89,7 @@
 'function' = { fg = "function-name-fg" }
 
 'punctuation' = { fg = "gold", modifiers = ["bold"] }  # (){}[]:;,.
-'punctuation.delimiter' = { fg = "foreground" }        # Commas and colons.
+'punctuation.delimiter' = { fg = "lavender-gray" }     # Commas and colons.
 'punctuation.bracket.type_arguments' = { fg = 'text' }
 
 
@@ -66,9 +100,7 @@
 ######## Diagnostics ########
 
 # Diffs
-'diff.plus' = { fg = "light-green" }
-'diff.minus' = { fg = "cinnabar" }
-'diff.delta' = { fg = "macaroni-and-cheese" }
+
 
 # Gutter area errors and warnings
 'info' = { fg = "magenta" }
@@ -77,38 +109,21 @@
 'hint' = { fg = "light-blue" }
 # Editing area errors and warnings
 #'diagnostic' = { fg = 'cyan' }
-# 'diagnostic.hint' = { fg = "magenta", bg = "red" }
-'diagnostic.info' = { fg = "green" }
-'diagnostic.warning' = { fg = "macaroni-and-cheese", underline = { style = "curl" } }
-'diagnostic.error' = { fg = "cinnabar", underline = { style = "curl" } }
+
 
 ####### Rulers and indent guides #######
 # 'ui.virtual.ruler' = { bg = "butterfly-bush" }
-'ui.virtual.ruler' = { bg = "background" }
-'ui.virtual.indent-guide' = { fg = "scarlet-gum" }
+
 
 ######## Buffer lines #######
 'ui.bufferline' = { bg = 'background' }
 'ui.bufferline.active' = { bg = "#654d80" }
-'ui.window' = { fg = "lilac-bush" }
+
 
 ########### Status line #######
 # ui.statusline
-'ui.statusline' = { bg = "#654d80" }
-'ui.statusline.inactive' = { bg = "tolopea" }
-'ui.statusline.insert' = { bg = "#49e9A6", fg = "#171d1e"}
-'ui.statusline.select' = { bg = "light-blue", fg = "#171d1e" }
 
-# ui.statusline
-# Statusline
-# uiStatusline
-# ui.statusline.inactive.statuslineStatusline (unfocused document)
-# ui.statusline.normal.inactiveStatusline mode during normal mode (only if editor.color-modes is enabled)
-# ui.statusline.insert[palette]
-# goldStatusline mode during insert mode (only if editor.color-modes is enabled)
-# ui.statusline.select = "#FFD700"Statusline mode during select mode (only if editor.color-modes is enabled)
-# ui.statusline.separator
-# Separator character in statusline
+
 [palette]
 copper = "#d67e5c"
 galliano = "#D5971A"
@@ -120,8 +135,8 @@ east-side = "#b2a2c3"
 jagger = "#413253"
 ce-soir = "#8767a8"
 light-green = "#8ce99a"
-background = "#30243d"
-foreground = "#ccbfd9"
+bleached-cedar = "#30243d"
+lavender-gray = "#ccbfd9"
 text = "#ccbfd9"
 cinnabar = "#e34e1c"
 macaroni-and-cheese = "#fec080"
@@ -129,21 +144,13 @@ twine = "#C48254"
 butterfly-bush = "#765992"
 tolopea = "#2b2136"
 scarlet-gum = "#422E56"
-# jagger = "#3e2d51"
-
+turquoise = "#49e9a6"
 line-number-fg = "#5e5973"
 lilac-bush = "#996BC7"
-
-
 orange-keyword-fg = "#E66533"
 function-name-fg = "#16A3B6"
 brackets-fg = "#CCBFD9"
 light-blue = "#49d6e9"
 string-fg = "#49E9A6"
-# light-blue = "#49D6E9"
-# matchers #8767A8
-
-# popup-background = "#462d5d"
 popup-background = "#3D2E4D"
 popup-selected = "#472E60"
-
