@@ -22,8 +22,9 @@
 
 # Popups 
 'ui.popup' = { bg = "popup-background" }
-
-
+'ui.popup.info' = { bg = "popup-background" }
+'ui.menu' = { bg = "popup-background" }
+'ui.menu.selected' = { bg = "popup-selected" }
 ########## Syntax highlighting ##########
 'type' = { fg = "copper" }
 'type.enum.variant' = { fg = 'copper' }
@@ -36,7 +37,9 @@
 'variable' = { fg = "maize" }
 'variable.other.member' = { fg = "text" }
 
-'comment' = { fg = "deluge", modifiers = ["italic"] } # This is a comment.
+# 'comment' = { fg = "deluge", modifiers = ["italic"] } # This is a comment.
+'comment' = { fg = "deluge" } # This is a comment.
+
 'comment.line' = {}                                   # Line comments, like this.
 'comment.block' = {}                                  # Block comments, like /* this */ in some languages.
 'comment.block.documentation' = {}                    # Doc comments, e.g '///' in rust.
@@ -140,5 +143,7 @@ string-fg = "#49E9A6"
 # light-blue = "#49D6E9"
 # matchers #8767A8
 
-popup-background = "#462d5d"
+# popup-background = "#462d5d"
+popup-background = "#3D2E4D"
+popup-selected = "#472E60"
 
