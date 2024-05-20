@@ -1,38 +1,31 @@
-# Port of Noctis Viola from VSCode
+# port of noctis viola from vscode
 
-##################### UI elements ############################
-'ui.background' = { fg = "lavender-gray", bg = "bleached-cedar" } # Default background color.
-'ui.background.separator' = { fg = "jagger" }                     # Picker separator below input line
-'ui.linenr' = { fg = "smoky" }
-'ui.linenr.selected' = { fg = "lilac-bush" }
-'ui.statusline' = { bg = "#654d80" }
-'ui.statusline.inactive' = { bg = "tolopea" }
-'ui.statusline.insert' = { bg = "turquoise", fg = "#171d1e" }
-'ui.statusline.select' = { bg = "light-blue", fg = "#171d1e" }
-'ui.popup' = { bg = "popup-background" }
-'ui.popup.info' = { bg = "popup-background" }
-'ui.window' = { fg = "lilac-bush" }
-# 'ui.help' = 
+##################### ui elements ############################
+'ui.background' = { fg = "text", bg = "editor-bg" } # default background color.
+'ui.background.separator' = { fg = "jagger" }                     # picker separator below input line
+'ui.linenr' = { fg = "disabled-text-fg" }
+'ui.linenr.selected' = { fg = "active-text-fg" }
 
-# 'ui.text'
-# 'ui.text.focus'
-# 'ui.text.inactive'
-'ui.virtual' = { fg = "jagger" }
-'ui.virtual.ruler' = { bg = "background" }
-'ui.virtual.indent-guide' = { fg = "scarlet-gum" }
-'ui.virtual.inlay-hint' = { fg = "east-side", modifiers = ["dim"] }
+# 'ui.statusline' = { bg = "#654d80" }
+'ui.statusline' = { bg = "editor-bg", fg = "active-text-fg"} # Status line on active split
+'ui.statusline.inactive' = { bg = "editor-bg", fg = "disabled-text-fg" } # Status line on inactive split
+'ui.statusline.insert' = { bg = "turquoise", fg = "#171d1e" } # Mode indicator for INSERT mode
+'ui.statusline.select' = { bg = "light-blue", fg = "#171d1e" } # Mode indicator for SELECT mode
 
-'ui.selection' = { bg = "jagger" }
-# 'ui.selection.primary' 
-'ui.cursor.select' = { bg = "jagger" }                       # The cursor in select mode (v).
-'ui.cursor.insert' = { bg = "text", fg = "green" }
-'ui.cursor.match' = { bg = "ce-soir", modifiers = ["bold"] }
-# 'ui.cursor'
-# 'ui.highlight'
-# 'ui.highlight.frameline'
-# 'ui.debug'
-# 'ui.debug.breakpoint'
-'ui.menu' = { bg = "popup-background" }
+'ui.popup' = { bg = "popup-bg" } # Popups
+'ui.popup.info' = { bg = "popup-bg" }
+
+'ui.window' = { fg = "editor-border" } # Border lines separating splits
+
+'ui.selection' = { bg = "selected-text-bg" }
+'ui.cursor.primary' = { bg = "text", fg = "editor-bg" }
+'ui.cursor.select' = { bg = "text" } # The cursor icon in SELECT mode
+'ui.cursor.insert' = { bg = "text" } # The cursor icon in INSERT mode
+'ui.cursor.match' = { bg = "#49D6E9", fg = "editor-bg", modifiers = ["bold"]} # Bracket matching
+
+'ui.cursorline.primary' = { bg = "cursorline-bg" }
+
+'ui.menu' = { bg = "popup-bg" }
 'ui.menu.selected' = { bg = "popup-selected" }
 # 'ui.menu.scroll'
 
@@ -44,23 +37,8 @@
 'diff.plus' = { fg = "light-green" }
 'diff.minus' = { fg = "cinnabar" }
 'diff.delta' = { fg = "macaroni-and-cheese" }
-# 'ui.cursor.primary' = { bg = "function-name-fg", fg = "#171d1e" }
 
-# The cursor in insert mode (i).
-
-# The matching parentheses of that under the cursor.
-
-# Line numbers
-
-
-# Inlay hints
-# 
-
-
-# Popups 
-
-
-########## Syntax highlighting ##########
+########## syntax highlighting ##########
 'type' = { fg = "copper" }
 'type.enum.variant' = { fg = 'copper' }
 
@@ -72,11 +50,11 @@
 'variable' = { fg = "maize" }
 'variable.other.member' = { fg = "text" }
 
-'comment' = { fg = "deluge" } # This is a comment.
+'comment' = { fg = "deluge" } # this is a comment.
 
-'comment.line' = {}                # Line comments, like this.
-'comment.block' = {}               # Block comments, like /* this */ in some languages.
-'comment.block.documentation' = {} # Doc comments, e.g '///' in rust.
+'comment.line' = {}                # line comments, like this.
+'comment.block' = {}               # block comments, like /* this */ in some languages.
+'comment.block.documentation' = {} # doc comments, e.g '///' in rust.
 
 'keyword' = { fg = "pale-violet-red" }
 'keyword.storage.type' = { fg = "pale-violet-red" }
@@ -88,69 +66,88 @@
 
 'function' = { fg = "function-name-fg" }
 
-'punctuation' = { fg = "gold", modifiers = ["bold"] }  # (){}[]:;,.
-'punctuation.delimiter' = { fg = "lavender-gray" }     # Commas and colons.
+# 'punctuation' = { fg = "gold", modifiers = ["bold"] }  # (){}[]:;,.
+'punctuation' = { modifiers = ["bold"] }
+'punctuation.delimiter' = { fg = "text" }     # commas and colons.
 'punctuation.bracket.type_arguments' = { fg = 'text' }
 
 
-'namespace' = { fg = "light-blue" } # * Namespace keyword in java, C#, etc.
+'namespace' = { fg = "light-blue" } # * namespace keyword in java, c#, etc.
 
 'string' = { fg = "string-fg" }
 
-######## Diagnostics ########
+######## diagnostics ########
 
-# Diffs
+# diffs
 
 
-# Gutter area errors and warnings
+# gutter area errors and warnings
 'info' = { fg = "magenta" }
 'warning' = { fg = "twine" }
 'error' = { fg = "cinnabar" }
 'hint' = { fg = "light-blue" }
-# Editing area errors and warnings
+# editing area errors and warnings
 #'diagnostic' = { fg = 'cyan' }
 
 
-####### Rulers and indent guides #######
+####### rulers and indent guides #######
 # 'ui.virtual.ruler' = { bg = "butterfly-bush" }
+'ui.virtual' = { fg = "jagger" }
+'ui.virtual.ruler' = { fg = "dimmed-border" }
+'ui.virtual.indent-guide' = { fg = "dimmed-border" }
+'ui.virtual.inlay-hint' = { fg = "east-side", modifiers = ["dim"] }
 
-
-######## Buffer lines #######
-'ui.bufferline' = { bg = 'background' }
+######## buffer lines #######
+# 'ui.bufferline' = { bg = 'background' }
+'ui.bufferline' = { bg ='editor-bg' }
 'ui.bufferline.active' = { bg = "#654d80" }
 
 
-########### Status line #######
+########### status line #######
 # ui.statusline
 
 
 [palette]
 copper = "#d67e5c"
-galliano = "#D5971A"
-maize = "#E4B781"
-pale-violet-red = "#DF769B"
-medium-slate-blue = "#7060EB"
+galliano = "#d5971a"
+maize = "#e4b781"
+pale-violet-red = "#df769b"
+medium-slate-blue = "#7060eb"
 deluge = "#7f659a"
 east-side = "#b2a2c3"
 jagger = "#413253"
 ce-soir = "#8767a8"
 light-green = "#8ce99a"
-bleached-cedar = "#30243d"
-lavender-gray = "#ccbfd9"
+
+
 text = "#ccbfd9"
 cinnabar = "#e34e1c"
 macaroni-and-cheese = "#fec080"
-twine = "#C48254"
+twine = "#c48254"
 butterfly-bush = "#765992"
 tolopea = "#2b2136"
-scarlet-gum = "#422E56"
+
 turquoise = "#49e9a6"
 line-number-fg = "#5e5973"
-lilac-bush = "#996BC7"
-orange-keyword-fg = "#E66533"
-function-name-fg = "#16A3B6"
-brackets-fg = "#CCBFD9"
+# lilac-bush = "#996bc7"
+orange-keyword-fg = "#e66533"
+function-name-fg = "#16a3b6"
+brackets-fg = "#ccbfd9"
 light-blue = "#49d6e9"
-string-fg = "#49E9A6"
-popup-background = "#3D2E4D"
-popup-selected = "#472E60"
+string-fg = "#49e9a6"
+# popup-background = "#3d2e4d"
+# popup-selected = "#472e60"
+
+
+editor-bg = "#30243D"
+popup-bg = "#462D5D"
+
+dimmed-border = "#473856"
+# ruler-fg = "#473856"
+indent-guide-fg = "#473856"
+editor-border = "#3D2E4D"
+toolbar-bg = "#3D2E4D"
+disabled-text-fg = "#665970"
+active-text-fg = "#996BC7"
+selected-text-bg = "#4C3A60"
+cursorline-bg = "#3E2D51"
